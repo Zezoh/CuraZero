@@ -72,7 +72,7 @@ case "$1" in
 	archive|debian)
 		SCRIPTS_DIR=linux
 		OS=Linux
-		LINUX_TARGET_NAME="curabydago"
+		LINUX_TARGET_NAME="curazero"
 		BUILD_ENGINE=${3:-1}
 		case "$2" in
 		32)
@@ -110,14 +110,14 @@ case "$1" in
 esac
 
 ##Which version name are we appending to the final archive
-export BUILD_NAME="CuraByDagoma"
+export BUILD_NAME="CuraZero"
 
 ##CuraEngine github repository
-CURA_ENGINE_REPO="https://github.com/dagoma3d/CuraEngine.git"
+CURA_ENGINE_REPO="https://github.com/Ultimaker/CuraEngine.git"
 
 ## CuraEngine version to build, default branch
-## Four more info, please check https://github.com/dagoma3d/CuraEngine
-CURA_ENGINE_VERSION=dagoma
+## Four more info, please check https://github.com/Ultimaker/CuraEngine
+CURA_ENGINE_VERSION=master
 
 # Change working directory to the directory the script is in
 # http://stackoverflow.com/a/246128
@@ -191,7 +191,7 @@ if [ $BUILD_ENGINE != "0" ]; then
 	#git checkout ${CURA_ENGINE_VERSION}
 	#cd ..
 	cd CuraEngine
-	git checkout dagoma
+	git checkout master
 	git pull
 	cd ..
 	make -C CuraEngine clean
@@ -280,11 +280,11 @@ if [[ $BUILD_TARGET == debian* ]]; then
 	echo $BUILD_NAME > scripts/linux/${BUILD_TARGET}/usr/share/${LINUX_TARGET_NAME}/Cura/version
 	rm -rf scripts/linux/${BUILD_TARGET}/usr/share/applications
 	mkdir -p scripts/linux/${BUILD_TARGET}/usr/share/applications
-	cp scripts/linux/utils/curabydago.desktop scripts/linux/${BUILD_TARGET}/usr/share/applications/${LINUX_TARGET_NAME}.desktop
+	cp scripts/linux/utils/curazero.desktop scripts/linux/${BUILD_TARGET}/usr/share/applications/${LINUX_TARGET_NAME}.desktop
 	replaceVars scripts/linux/${BUILD_TARGET}/usr/share/applications/${LINUX_TARGET_NAME}.desktop
 	rm -rf scripts/linux/${BUILD_TARGET}/usr/bin
 	mkdir -p scripts/linux/${BUILD_TARGET}/usr/bin
-	cp scripts/linux/utils/debian/curabydago scripts/linux/${BUILD_TARGET}/usr/bin/${LINUX_TARGET_NAME}
+	cp scripts/linux/utils/debian/curazero scripts/linux/${BUILD_TARGET}/usr/bin/${LINUX_TARGET_NAME}
 	replaceVars scripts/linux/${BUILD_TARGET}/usr/bin/${LINUX_TARGET_NAME}
 	cp -a scripts/linux/utils/debian/DEBIAN scripts/linux/${BUILD_TARGET}/
 	replaceVars scripts/linux/${BUILD_TARGET}/DEBIAN/control
@@ -328,7 +328,7 @@ if [[ $BUILD_TARGET == archive* ]]; then
 	cp scripts/linux/utils/cura.py scripts/linux/${BUILD_TARGET}/${BUILD_NAME}-${BUILD_TARGET}/${LINUX_TARGET_NAME}/
 	replaceVars scripts/linux/${BUILD_TARGET}/${BUILD_NAME}-${BUILD_TARGET}/${LINUX_TARGET_NAME}/cura.py
 	echo $BUILD_NAME > scripts/linux/${BUILD_TARGET}/${BUILD_NAME}-${BUILD_TARGET}/${LINUX_TARGET_NAME}/Cura/version
-	cp scripts/linux/utils/curabydago.desktop scripts/linux/${BUILD_TARGET}/${BUILD_NAME}-${BUILD_TARGET}/${LINUX_TARGET_NAME}.desktop
+	cp scripts/linux/utils/curazero.desktop scripts/linux/${BUILD_TARGET}/${BUILD_NAME}-${BUILD_TARGET}/${LINUX_TARGET_NAME}.desktop
 	replaceVars scripts/linux/${BUILD_TARGET}/${BUILD_NAME}-${BUILD_TARGET}/${LINUX_TARGET_NAME}.desktop
 	cp scripts/linux/utils/archive/README.md scripts/linux/${BUILD_TARGET}/${BUILD_NAME}-${BUILD_TARGET}/README.md
 	replaceVars scripts/linux/${BUILD_TARGET}/${BUILD_NAME}-${BUILD_TARGET}/README.md
@@ -373,9 +373,9 @@ if [[ $BUILD_TARGET == windows ]]; then
 
 	#Add winPython
 	if [ $BUILD_ARCHITECTURE == "x86" ]; then
-		cp -r python-3.9.10 ${BUILD_NAME}/python3
+		cp -r python-3.11.9 ${BUILD_NAME}/python3
 	else
-		cp -r python-3.9.10.amd64 ${BUILD_NAME}/python3
+		cp -r python-3.11.9.amd64 ${BUILD_NAME}/python3
 	fi
 	echo "Step winPython Finished"
 

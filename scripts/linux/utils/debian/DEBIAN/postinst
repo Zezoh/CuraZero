@@ -2,8 +2,8 @@
 
 set -e
 
-echo 'Removing configuration files stored in ~/.curaByDagoma/<BUILD_VERSION> ...'
-rm -rf $HOME/.curaByDagoma/<BUILD_VERSION>
+echo 'Removing configuration files stored in ~/.curaZero/<BUILD_VERSION> ...'
+rm -rf $HOME/.curaZero/<BUILD_VERSION>
 echo 'Install ok!'
 
 exit 0

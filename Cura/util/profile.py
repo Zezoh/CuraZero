@@ -285,7 +285,7 @@ setting('preSwitchExtruder2.gcode', '', str, 'alteration', 'alteration')
 setting('postSwitchExtruder2.gcode', '', str, 'alteration', 'alteration')
 setting('startMode', 'Normal', ['Simple', 'Normal'], 'preference', 'hidden')
 setting('oneAtATime', 'False', bool, 'preference', 'hidden')
-setting('lastFile', os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../..', 'resources', 'example', 'dagoma.stl')), str, 'preference', 'hidden')
+setting('lastFile', os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../..', 'resources', 'example', 'curazero.stl')), str, 'preference', 'hidden')
 setting('save_profile', 'False', bool, 'preference', 'hidden').setLabel(_("Save profile on slice"), _("When slicing save the profile as [stl_file]_profile.ini next to the model."))
 setting('filament_cost_kg', '46', float, 'advanced', _('Filament')).setLabel(_("Cost (price/kg)"), _("Cost of your filament per kg, to estimate the cost of the final print."))
 setting('filament_cost_kg2', '46', float, 'advanced', _('Filament')).setLabel(_("Cost (price/kg)"), _("Cost of your filament per kg, to estimate the cost of the final print."))
@@ -457,11 +457,11 @@ def getBasePath():
 	:return: The path in which the current configuration files are stored. This depends on the used OS.
 	"""
 	if platform.system() == "Windows":
-		basePath = os.path.normpath(os.path.expanduser('~/.curaByDagoma/' + os.environ['CURABYDAGO_VERSION']))
+		basePath = os.path.normpath(os.path.expanduser('~/.curaZero/' + os.environ['CURAZERO_VERSION']))
 	elif platform.system() == "Darwin":
-		basePath = os.path.expanduser('~/Library/Application Support/CuraByDagoma/' + os.environ['CURABYDAGO_VERSION'])
+		basePath = os.path.expanduser('~/Library/Application Support/CuraZero/' + os.environ['CURAZERO_VERSION'])
 	else:
-		basePath = os.path.expanduser('~/.curaByDagoma/' + os.environ['CURABYDAGO_VERSION'])
+		basePath = os.path.expanduser('~/.curaZero/' + os.environ['CURAZERO_VERSION'])
 	if not os.path.isdir(basePath):
 		try:
 			os.makedirs(basePath)
@@ -1117,7 +1117,7 @@ def replaceTagMatch(m):
 		return pre + getMachineSetting('machine_name')
 
 	if tag == 'app_version':
-		return ' ' + os.environ['CURABYDAGO_VERSION']
+		return ' ' + os.environ['CURAZERO_VERSION']
 	
 	if tag == 'start_extruder':
 		return pre + getProfileSetting('start_extruder')

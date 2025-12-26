@@ -16,7 +16,7 @@ except ImportError:
 class CuraApp(wx.App):
 	def __init__(self, files):
 		if platform.system() == "Windows" and not 'PYCHARM_HOSTED' in os.environ:
-			basePath = os.path.normpath(os.path.expanduser('~/.curaByDagoma/' + os.environ['CURABYDAGO_VERSION']))
+			basePath = os.path.normpath(os.path.expanduser('~/.curaZero/' + os.environ['CURAZERO_VERSION']))
 			super(CuraApp, self).__init__(redirect=False)
 		else:
 			super(CuraApp, self).__init__(redirect=False)
@@ -115,7 +115,7 @@ class CuraApp(wx.App):
 		if profile.getMachineSetting('machine_name') == '':
 			configWizard.ConfigWizard()
 			#Check if we need to copy our examples
-			exampleFile = os.path.normpath(os.path.join(resources.resourceBasePath, 'example', 'dagoma.stl'))
+			exampleFile = os.path.normpath(os.path.join(resources.resourceBasePath, 'example', 'curazero.stl'))
 			self.loadFiles = [exampleFile]
 
 		from Cura.gui import mainWindow

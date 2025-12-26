@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Cura Zero
+Comment=Cura Zero is a fork of Legacy Cura.
+Icon=/usr/share/curazero/resources/images/cura.ico
+Exec=/usr/bin/python3 /usr/share/curazero/cura.py
+Path=/usr/share/curazero/
+StartupNotify=true
+Terminal=false
+Categories=GNOME;GTK;Utility;

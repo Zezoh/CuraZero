@@ -29,7 +29,7 @@ PLIST = {
     u'CFBundleDisplayName': build_name,
     u'CFBundleShortVersionString': release_version,
     u'CFBundleVersion': release_version,
-    u'CFBundleIdentifier': u'com.dagoma.'+ build_name.lower(),
+    u'CFBundleIdentifier': u'com.curazero.'+ build_name.lower(),
     u'LSMinimumSystemVersion': u'10.9',
     u'LSApplicationCategoryType': u'public.app-category.graphics-design'
 }

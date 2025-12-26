@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017
 # This file is distributed under the same license as the Cura package.
-# Orel <orel@dagoma.fr>, 2017.
+# Orel <orel@curazero.fr>, 2017.
 #
 msgid ""
 msgstr ""
@@ -651,7 +651,7 @@ msgstr ""
 
 msgid ""
 "If you have noticed a problem, please first ensure you are using the latest "
-"version of Cura By Dagoma."
+"version of Cura Zero."
 msgstr ""
 
 msgid ""
@@ -661,7 +661,7 @@ msgstr ""
 
 msgid ""
 "If you don't feel confident with the GitHub platform, you can also create a "
-"support ticket from the dagoma's website :"
+"support ticket from the curazero's website :"
 msgstr ""
 
 msgid "Before explaining the problem, please write the version of your OS."
@@ -679,10 +679,10 @@ msgstr ""
 msgid ""
 "Then, please attach the 3 files named : 'current_profile.ini', 'mru_filelist."
 "ini', 'preferences.ini'.\n"
-"- On Windows, you can find them in ~/.curaByDagoma/%s/.\n"
-"- On MacOs, you can find them in ~/Library/Application Support/CuraByDagoma/"
+"- On Windows, you can find them in ~/.curaByCura Zero/%s/.\n"
+"- On MacOs, you can find them in ~/Library/Application Support/CuraByCura Zero/"
 "%s/.\n"
-"- On Linux, you can find them in ~/.curaByDagoma/%s/."
+"- On Linux, you can find them in ~/.curaByCura Zero/%s/."
 msgstr ""
 
 msgid ""
@@ -2477,7 +2477,7 @@ msgstr ""
 msgid "Configuration wizard"
 msgstr ""
 
-msgid "Welcome! Thank you for using Cura by Dagoma %s!"
+msgid "Welcome! Thank you for using Cura Zero %s!"
 msgstr ""
 
 msgid ""
@@ -2491,20 +2491,20 @@ msgstr ""
 msgid "What type of 3D printer have you got?"
 msgstr ""
 
-msgid "Configuration Cura by Dagoma %s"
+msgid "Configuration Cura Zero %s"
 msgstr ""
 
-msgid "Configuration Cura by Dagoma"
+msgid "Configuration Cura Zero"
 msgstr ""
 
-msgid "Dagoma would like to thank you for your trust."
+msgid "Cura Zero would like to thank you for your trust."
 msgstr ""
 
 msgid ""
-"The Cura by Dagoma software is now ready to use with your %s 3D printer."
+"The Cura Zero software is now ready to use with your %s 3D printer."
 msgstr ""
 
-msgid "The Cura by Dagoma software is now ready to use with your 3D printer."
+msgid "The Cura Zero software is now ready to use with your 3D printer."
 msgstr ""
 
 msgid "Feel free to contact us!"
@@ -2754,8 +2754,8 @@ msgstr "Customize..."
 msgid "Configuration Terminée!"
 msgstr "Configuration Complete!"
 
-msgid "Cura par Dagoma est maintenant prêt à être utilisé!"
-msgstr "Cura by Dagoma is now ready to be used!"
+msgid "Cura Zero est maintenant prêt à être utilisé!"
+msgstr "Cura Zero is now ready to be used!"
 
 msgid "Configuration Personnalisée"
 msgstr "Custom configuration"
@@ -2861,7 +2861,7 @@ msgstr ""
 msgid "This setting must be used with caution!"
 msgstr ""
 
-msgid "Filament approved by Dagoma."
+msgid "Filament approved by Cura Zero."
 msgstr ""
 
 msgid "Silver"
@@ -3167,7 +3167,7 @@ msgid "Bed temperature: %d "
 msgstr ""
 
 msgid ""
-"Cura by Dagoma was originally forked from Legacy Cura.\n"
+"Cura Zero was originally forked from Legacy Cura.\n"
 "It is built with the following components:"
 msgstr ""
 
@@ -3399,10 +3399,10 @@ msgid ""
 "ones..."
 msgstr ""
 
-msgid "Check why this file cannot be printed on Dagoma's products."
+msgid "Check why this file cannot be printed on Cura Zero's products."
 msgstr ""
 
-msgid "Check why these files cannot be printed on Dagoma's products."
+msgid "Check why these files cannot be printed on Cura Zero's products."
 msgstr ""
 
 msgid "More details..."
@@ -3469,17 +3469,17 @@ msgid "Up to date software"
 msgstr ""
 
 msgid "contact_url"
-msgstr "https://www.dagoma3d.com/en_US/nous-contacter?utm_source=cura"
+msgstr "https://www.curazero3d.com/en_US/nous-contacter?utm_source=cura"
 
 msgid "buy_url"
 msgstr ""
-"https://www.dagoma3d.com/en_US/shop/category/filament-2?utm_source=cura"
+"https://www.curazero3d.com/en_US/shop/category/filament-2?utm_source=cura"
 
 msgid "help_url"
-msgstr "http://start.dagoma3d.com/cura-by-dagoma?utm_source=cura"
+msgstr "http://start.curazero3d.com/cura-by-curazero?utm_source=cura"
 
 msgid "warning_url"
-msgstr "https://www.dagoma3d.com/en_US/armes-inoffensives?utm_source=cura"
+msgstr "https://www.curazero3d.com/en_US/armes-inoffensives?utm_source=cura"
 
 msgid "(or Sigma head)"
 msgstr ""

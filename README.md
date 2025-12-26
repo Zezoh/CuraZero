@@ -1,15 +1,15 @@
-# Cura by Dagoma
+# Cura Zero
 
-Before releasing a new version, please read the [CHECK file](https://github.com/dagoma3d/CuraByDagoma/blob/03d59610ab4fe7f50b081df5210855dce89d94b6/CHECK.md).
+Before releasing a new version, please read the [CHECK file](CHECK_LIST.md).
 
 ## About
 
-Cura by Dagoma was originally forked from Legacy Cura.
+Cura Zero was originally forked from Legacy Cura.
 It is built with the following components:
 - [LegacyCura](https://github.com/daid/LegacyCura)
 - [CuraEngine](https://github.com/Ultimaker/CuraEngine)
 - [Clipper](http://www.angusj.com/delphi/clipper.php)
-- [Python 3.9](http://python.org/)
+- [Python 3.11](http://python.org/)
 - [wxPython](http://www.wxpython.org/)
 - [PyOpenGL](http://pyopengl.sourceforge.net/)
 - [PySerial](http://pyserial.sourceforge.net/)
@@ -25,25 +25,25 @@ The slicer binary is built on the fly. It is a full C++ project. The compilation
 
 WinPython is used for production. In development, we use a python virtual environment (see below).
 
-First download WinPython according to your architecture system. In this project, we are using Python 3.9.10.
-- Windows 64-bits : https://sourceforge.net/projects/winpython/files/WinPython_3.9/3.9.10.0/Winpython64-3.9.10.0dot.exe/download
-- Windows 32-bits : https://sourceforge.net/projects/winpython/files/WinPython_3.9/3.9.10.0/Winpython32-3.9.10.0dot.exe/download
+First download WinPython according to your architecture system. In this project, we are using Python 3.11.9.
+- Windows 64-bits : https://sourceforge.net/projects/winpython/files/WinPython_3.11/
+- Windows 32-bits : https://sourceforge.net/projects/winpython/files/WinPython_3.11/
 
 After extracting it, open the ```WinPython Command Prompt.exe``` in the WinPython folder. Download the necessary dependencies using pip :
 ```
 pip install wheel setuptools pyserial wxPython
 ```
 Then download the two following wheels from this [website](https://www.lfd.uci.edu/~gohlke/pythonlibs/#_pyopengl), according to your OS :
-- Windows 64-bits : ```PyOpenGL-3.1.6-cp39-cp39-win_amd64.whl``` and ```PyOpenGL_accelerate-3.1.6-cp39-cp39-win_amd64.whl```
-- Windows 32-bits : ```PyOpenGL‑3.1.6‑cp39‑cp39‑win32.whl``` and ```PyOpenGL_accelerate‑3.1.6‑cp310‑cp310‑win32.whl```
+- Windows 64-bits : ```PyOpenGL-3.1.7-cp311-cp311-win_amd64.whl``` and ```PyOpenGL_accelerate-3.1.7-cp311-cp311-win_amd64.whl```
+- Windows 32-bits : ```PyOpenGL‑3.1.7‑cp311‑cp311‑win32.whl``` and ```PyOpenGL_accelerate‑3.1.7‑cp311‑cp311‑win32.whl```
 
-Finally copy the ```python-3.9.10.amd64``` folder (```python-3.9.10``` for Windows 32-bits) and paste it in your project root. After packaging, this folder will be renamed to ```python```.
+Finally copy the ```python-3.11.9.amd64``` folder (```python-3.11.9``` for Windows 32-bits) and paste it in your project root. After packaging, this folder will be renamed to ```python```.
 
 ## Using a virtual Python environment
 
 Virtual Python environments have been used only during development. In production, for Windows, we use WinPython (see section above).
 
-Download and use a Python3.x universal installer from [Python website](https://www.python.org/downloads). In this project, we are using [Python3.9.10](https://www.python.org/ftp/python/3.9.10/python-3.9.10-macos11.pkg).
+Download and use a Python3.x universal installer from [Python website](https://www.python.org/downloads). In this project, we are using [Python3.11.9](https://www.python.org/ftp/python/3.11.9/python-3.11.9-macos11.pkg).
 
 ### Windows
 In the project folder, open a terminate and, to create a virtual environment ("venv") with the python version you've just installed, execute :
@@ -76,8 +76,8 @@ pip install --upgrade pip
 ```
 
 On Windows, please download the two following wheels from this [website](https://www.lfd.uci.edu/~gohlke/pythonlibs/#_pyopengl), according to your OS :
-- Windows 64-bits : ```PyOpenGL-3.1.6-cp39-cp39-win_amd64.whl``` and ```PyOpenGL_accelerate-3.1.6-cp39-cp39-win_amd64.whl```
-- Windows 32-bits : ```PyOpenGL‑3.1.6‑cp39‑cp39‑win32.whl``` and ```PyOpenGL_accelerate‑3.1.6‑cp310‑cp310‑win32.whl```
+- Windows 64-bits : ```PyOpenGL-3.1.7-cp311-cp311-win_amd64.whl``` and ```PyOpenGL_accelerate-3.1.7-cp311-cp311-win_amd64.whl```
+- Windows 32-bits : ```PyOpenGL‑3.1.7‑cp311‑cp311‑win32.whl``` and ```PyOpenGL_accelerate‑3.1.7‑cp311‑cp311‑win32.whl```
 
 To install the necesary python modules, we will use python wheels.
 Please use the requirements file linked to your OS, among the following list : 
@@ -126,17 +126,17 @@ https://drive.google.com/file/d/1M4feXfi3IyKtdsA5HAFySgIrI7Vo4CHA/view?usp=shari
 
 To install it :
 ```
-$ sudo dpkg -i ./CuraByDagoma_amd64.deb
+$ sudo dpkg -i ./CuraZero_amd64.deb
 $ sudo apt install -f
 ```
 or
 ```
-$ sudo apt install ./CuraByDagoma_amd64.deb
+$ sudo apt install ./CuraZero_amd64.deb
 ```
 
 - Get CuraEngine binary file and make it executable
 ```
-(venv)$ wget github.com/dagoma3d/CuraEngine/releases/latest/download/CuraEngine-linux_x86_64 -O CuraEngine
+(venv)$ wget github.com/Ultimaker/CuraEngine/releases/latest/download/CuraEngine-linux_x86_64 -O CuraEngine
 (venv)$ chmod +x CuraEngine
 ```
 

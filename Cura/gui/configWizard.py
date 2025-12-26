@@ -223,7 +223,7 @@ class WelcomePanel(wx.Panel):
 
 		sizer = wx.BoxSizer(wx.VERTICAL)
 		sizer.Add(wx.StaticLine(self, -1), flag=wx.EXPAND|wx.TOP|wx.BOTTOM, border=5)
-		sizer.Add(wx.StaticText(self, wx.ID_ANY, _("The Cura by Dagoma software is now ready to use with your 3D printer.")))
+		sizer.Add(wx.StaticText(self, wx.ID_ANY, _("The Cura Zero software is now ready to use with your 3D printer.")))
 		sizer.Add(hl.HyperLinkCtrl(self, wx.ID_ANY, _("Feel free to contact us!"), URL = _("contact_url")))
 		sizer.Add(wx.StaticText(self, wx.ID_ANY, _("Enjoy!")))
 
@@ -236,9 +236,9 @@ class ConfigurationPage(WizardPageSimple):
 		WizardPageSimple.__init__(self, parent)
 
 		if firstTime:
-			titlePanel = TitlePanel(self, _("Configuration Cura by Dagoma"), _("Dagoma would like to thank you for your trust."))
+			titlePanel = TitlePanel(self, _("Configuration Cura Zero"), _("Cura Zero would like to thank you for your trust."))
 		else:
-			titlePanel = TitlePanel(self, _("Configuration Cura by Dagoma"))
+			titlePanel = TitlePanel(self, _("Configuration Cura Zero"))
 		self.printersPanel = PrintersPanel(self, firstTime)
 		self.optionsPanel = OptionsPanel(self)
 		if firstTime:

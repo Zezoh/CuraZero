@@ -13,9 +13,9 @@ from optparse import OptionParser
 import sys
 import os
 
-os.environ['CURABYDAGO_RELEASE_VERSION'] = '2.2.6'
-os.environ['CURABYDAGO_BUILD_VERSION'] = ''
-os.environ['CURABYDAGO_VERSION'] = os.environ['CURABYDAGO_RELEASE_VERSION'] + os.environ['CURABYDAGO_BUILD_VERSION']
+os.environ['CURAZERO_RELEASE_VERSION'] = '2.2.6'
+os.environ['CURAZERO_BUILD_VERSION'] = ''
+os.environ['CURAZERO_VERSION'] = os.environ['CURAZERO_RELEASE_VERSION'] + os.environ['CURAZERO_BUILD_VERSION']
 
 
 # Is it the first run after installation
@@ -39,10 +39,10 @@ if sys.platform.startswith('darwin'):
 	if os.path.isfile(newinstallfile):
 		try:
 			os.remove(newinstallfile)
-			current_profile_inifile = os.path.expanduser('~/Library/Application Support/CuraByDagoma/' + os.environ['CURABYDAGO_VERSION'] + '/current_profile.ini')
+			current_profile_inifile = os.path.expanduser('~/Library/Application Support/CuraZero/' + os.environ['CURAZERO_VERSION'] + '/current_profile.ini')
 			if os.path.isfile(current_profile_inifile):
 				os.remove(current_profile_inifile)
-			preferences_inifile = os.path.expanduser('~/Library/Application Support/CuraByDagoma/' + os.environ['CURABYDAGO_VERSION'] + '/preferences.ini')
+			preferences_inifile = os.path.expanduser('~/Library/Application Support/CuraZero/' + os.environ['CURAZERO_VERSION'] + '/preferences.ini')
 			if os.path.isfile(preferences_inifile):
 				os.remove(preferences_inifile)
 		except:
