@@ -76,12 +76,12 @@ LangString Create_Shortcut_Desktop ${LANG_FRENCH} "Ajouter un raccourci sur le B
 ;LangString Install_FTDI_Drivers ${LANG_FRENCH} "Installer les pilotes FTDI"
 ;LangString Install_CH340_Drivers ${LANG_ENGLISH} "Install CH340 Drivers"
 ;LangString Install_CH340_Drivers ${LANG_FRENCH} "Installer les pilotes CH340"
-LangString Open_STL_files_with_Cura ${LANG_ENGLISH} "Open STL files with Cura by Dagoma"
-LangString Open_STL_files_with_Cura ${LANG_FRENCH} "Ouvrir les fichiers STL avec Cura by Dagoma"
-;LangString Open_OBJ_files_with_Cura ${LANG_ENGLISH} "Open OBJ files with Cura by Dagoma"
-;LangString Open_OBJ_files_with_Cura ${LANG_FRENCH} "Ouvrir les fichiers OBJ avec Cura by Dagoma"
-;LangString Open_AMF_files_with_Cura ${LANG_ENGLISH} "Open AMF files with Cura by Dagoma"
-;LangString Open_AMF_files_with_Cura ${LANG_FRENCH} "Ouvrir les fichiers AMF avec Cura by Dagoma"
+LangString Open_STL_files_with_Cura ${LANG_ENGLISH} "Open STL files with Cura Zero"
+LangString Open_STL_files_with_Cura ${LANG_FRENCH} "Ouvrir les fichiers STL avec Cura Zero"
+;LangString Open_OBJ_files_with_Cura ${LANG_ENGLISH} "Open OBJ files with Cura Zero"
+;LangString Open_OBJ_files_with_Cura ${LANG_FRENCH} "Ouvrir les fichiers OBJ avec Cura Zero"
+;LangString Open_AMF_files_with_Cura ${LANG_ENGLISH} "Open AMF files with Cura Zero"
+;LangString Open_AMF_files_with_Cura ${LANG_FRENCH} "Ouvrir les fichiers AMF avec Cura Zero"
 LangString Exec_Cura ${LANG_ENGLISH} "Start ${BUILD_NAME}"
 LangString Exec_Cura ${LANG_FRENCH} "Lancer ${BUILD_NAME}"
 
@@ -106,7 +106,7 @@ FunctionEnd
 ; The stuff to install
 Section "${BUILD_NAME}"
   ;Try to delete Profile
-  RMDir /r "$PROFILE\.curaByDagoma\${BUILD_VERSION}"
+  RMDir /r "$PROFILE\.curaZero\${BUILD_VERSION}"
 
   SectionIn RO
 
@@ -121,7 +121,7 @@ Section "${BUILD_NAME}"
 
   ; Write the uninstall keys for Windows
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${BUILD_NAME}" "DisplayName" "${BUILD_NAME}"
-  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${BUILD_NAME}" "Publisher" "Dagoma"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${BUILD_NAME}" "Publisher" "Cura Zero"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${BUILD_NAME}" "DisplayVersion" "${BUILD_VERSION}"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${BUILD_NAME}" "DisplayIcon" "$INSTDIR\resources\images\cura.ico"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${BUILD_NAME}" "UninstallString" '"$INSTDIR\uninstall.exe"'
@@ -219,5 +219,5 @@ Section "Uninstall"
   Delete "$DESKTOP\${BUILD_NAME}.lnk"
   RMDir /r "$INSTDIR"
   ;Try to delete Profile
-  RMDir /r "$PROFILE\.curaByDagoma\${BUILD_VERSION}"
+  RMDir /r "$PROFILE\.curaZero\${BUILD_VERSION}"
 SectionEnd

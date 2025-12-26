@@ -1,4 +1,4 @@
-wheel
-setuptools
-numpy
-pyserial
+wheel==0.43.0
+setuptools==70.1.0
+numpy==2.0.1
+pyserial==3.5

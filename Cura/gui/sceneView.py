@@ -164,11 +164,11 @@ class SceneView(openglGui.glGuiPanel):
 		self.printButton.setBottomText('')
 		self.viewSelection.setValue(1)
 		self.printButton.setDisabled(False)
-		# self.youMagineButton.setDisabled(True) Dagoma
+		# self.youMagineButton.setDisabled(True)
 		self.OnViewChange()
 
 	def loadSceneFiles(self, filenames):
-		# self.youMagineButton.setDisabled(False) Dagoma
+		# self.youMagineButton.setDisabled(False)
 		#if self.viewSelection.getValue() == 4:
 		#	self.viewSelection.setValue(0)
 		#	self.OnViewChange()
@@ -309,7 +309,7 @@ class SceneView(openglGui.glGuiPanel):
 					dlg.Destroy()
 				else:
 					drive = drives[0]
-				filename = "dagoma0" + profile.getGCodeExtension() # Dagoma
+				filename = "curazero0" + profile.getGCodeExtension()
 				# filename = self._scene._objectList[0].getName() + profile.getGCodeExtension()
 				threading.Thread(target=self._saveGCode,args=(drive[1] + filename, drive[1])).start()
 			elif connectionGroup is not None:
@@ -356,7 +356,7 @@ class SceneView(openglGui.glGuiPanel):
 		if len(self._scene._objectList) < 1:
 			return
 		dlg=wx.FileDialog(self, _("Save toolpath"), os.path.dirname(profile.getPreference('lastFile')), style=wx.FD_SAVE|wx.FD_OVERWRITE_PROMPT)
-		filename = "dagoma0" + profile.getGCodeExtension()
+		filename = "curazero0" + profile.getGCodeExtension()
 		# filename = self._scene._objectList[0].getName() + profile.getGCodeExtension()
 		dlg.SetFilename(filename)
 		dlg.SetWildcard('GCode (*%s)|*%s;*%s' % (profile.getGCodeExtension(), profile.getGCodeExtension(), profile.getGCodeExtension()[0:2]))
@@ -439,7 +439,7 @@ class SceneView(openglGui.glGuiPanel):
 			self.notification.message(_("Save in progress..."))
 			size = float(len(data))
 			fsrc = io.StringIO(data)
-			print('Save in : ', targetFilename) # Dagoma
+			print('Save in : ', targetFilename)
 			with open(targetFilename, 'wb') as fdst:
 				while 1:
 					buf = fsrc.read(16*1024)

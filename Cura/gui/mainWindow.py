@@ -31,7 +31,7 @@ from xml.dom import minidom
 
 class mainWindow(wx.Frame):
 	def __init__(self):
-		self.windowTitle = 'Cura by Dagoma ' + os.environ['CURABYDAGO_VERSION']
+		self.windowTitle = 'Cura Zero ' + os.environ['CURAZERO_VERSION']
 		super(mainWindow, self).__init__(None, title=self.windowTitle, pos=(0, 0), size=wx.DisplaySize())
 
 		self.Bind(wx.EVT_CLOSE, self.OnClose)
@@ -542,7 +542,7 @@ class normalSettingsPanel(configBase.configPanelBase):
 
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		if not self.isLatest:
-			mainSizer.Add(hl.HyperLinkCtrl(self, wx.ID_ANY, _("New version available!"), URL="https://github.com/dagoma3d/CuraByDagoma/releases/latest"), flag=wx.EXPAND|wx.BOTTOM, border=2)
+			mainSizer.Add(hl.HyperLinkCtrl(self, wx.ID_ANY, _("New version available!"), URL="https://github.com/curazero/CuraZero/releases/latest"), flag=wx.EXPAND|wx.BOTTOM, border=2)
 		else:
 			mainSizer.Add(wx.StaticText(self, wx.ID_ANY, _("Up to date software")), flag=wx.EXPAND|wx.BOTTOM, border=2)
 		mainSizer.Add(wx.StaticLine(self, -1), flag=wx.EXPAND|wx.BOTTOM, border=5)
@@ -1041,7 +1041,7 @@ class normalSettingsPanel(configBase.configPanelBase):
 			self.temperatureSpinCtrl.Enable(True)
 		else:
 			calculated_print_temperature += self.temp_preci
-			self.warningStaticText.SetLabel(_("Filament approved by Dagoma."))
+			self.warningStaticText.SetLabel(_("Filament approved by Cura Zero."))
 			self.warningStaticText.SetForegroundColour((60, 118, 61))
 			self.temperatureSpinCtrl.Enable(False)
 		if int(profile.getMachineSetting('extruder_amount')) == 2:
@@ -1150,7 +1150,7 @@ class normalSettingsPanel(configBase.configPanelBase):
 			self.temperature2SpinCtrl.Enable(True)
 		else:
 			calculated_print_temperature += self.temp_preci
-			self.warning2StaticText.SetLabel(_("Filament approved by Dagoma."))
+			self.warning2StaticText.SetLabel(_("Filament approved by Cura Zero."))
 			self.warning2StaticText.SetForegroundColour((60, 118, 61))
 			self.temperature2SpinCtrl.Enable(False)
 		if int(profile.getMachineSetting('extruder_amount')) == 2:

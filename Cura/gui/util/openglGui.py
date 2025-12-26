@@ -448,7 +448,7 @@ class glButton(glGuiControl):
 		return x0 + w / 2, y0 + h / 2
 
 	def draw(self):
-		# if self._hidden: #Comment by dagoma
+		# if self._hidden:
 		# 	return
 		try :
 
@@ -502,7 +502,7 @@ class glButton(glGuiControl):
 		glPopMatrix()
 		progress = self._progressBar
 		if progress is not None:
-			bs = 64 #Add by dagoma
+			bs = 64
 			glColor4ub(60,60,60,255)
 			openglHelpers.glDrawQuad(pos[0]-bs/2, pos[1]+bs/2, bs, bs / 4)
 			glColor4ub(255,255,255,255)

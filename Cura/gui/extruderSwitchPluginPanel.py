@@ -12,7 +12,7 @@ class extruderSwitchPluginPanel(wx.Panel):
 	def __init__(self, parent, callback):
 		wx.Panel.__init__(self, parent, -1)
 		#Plugin page
-		self.plugin = pluginInfo.getPlugin("postprocess", 'extruderSwitchAtZ-ByDagoma.py')
+		self.plugin = pluginInfo.getPlugin("postprocess", 'extruderSwitchAtZ-CuraZero.py')
 		self.callback = callback
 		pluginInfo.setPostProcessPluginConfig()
 

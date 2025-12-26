@@ -36,12 +36,12 @@ Fix temperature order added to the end of the generated gcode when a single obje
 - Fix desktop shortcut
 - Fix Windows desktop shortcut launch path
 - Change the first layer thickness according to build plate type (for delta printers only)
-- Remove drivers installation from the windows installer. If needed, should be installed separately (https://github.com/dagoma3d/CuraByDagoma/tree/master/scripts/windows/drivers)
+- Remove drivers installation from the windows installer. If needed, should be installed separately (see scripts/windows/drivers).
 
 ## [2.2.0] - 2022-06-27
 - Migrate from Python 2.7 to Python 3.9
 - Migrate from NSIS 2 to NSIS 3
-- Update Dagoma icon and splash screen
+- Update Cura Zero icon and splash screen
 
 ## [2.1.9] - 2022-05-02
 - Introduce new Sigma 0.8mm toolhead.
@@ -125,7 +125,7 @@ Fix temperature order added to the end of the generated gcode when a single obje
 - No more preferences window but a Preferences menu item gathering the ability to change language and printer.
 - Refine xml again.
 - Set the model color to the color chosen by the user.
-- The printerhead xml island (introduced in a previous version of Cura by Dagoma when the discoeasy200 printer head v3 was released) is no more needed when not necessary (ie. when a single version of the printer head is available).
+- The printerhead xml island (introduced in a previous version of Cura Zero when the discoeasy200 printer head v3 was released) is no more needed when not necessary (ie. when a single version of the printer head is available).
 - Spiralize mode now available.
 - Remove xml islands on which the user has no way to modify parameters (linked to engine enumerations).
 

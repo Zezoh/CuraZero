@@ -13,7 +13,7 @@ class pausePluginPanel(wx.Panel):
 	def __init__(self, parent, callback):
 		wx.Panel.__init__(self, parent, -1)
 		#Plugin page
-		self.plugin = pluginInfo.getPlugin("postprocess", 'pauseAtZ-ByDagoma.py')
+		self.plugin = pluginInfo.getPlugin("postprocess", 'pauseAtZ-CuraZero.py')
 		self.callback = callback
 		pluginInfo.setPostProcessPluginConfig()
 

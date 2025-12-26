@@ -1,11 +1,11 @@
 # coding=utf-8
-#Name: Pause at (ByDagoma)
+#Name: Pause at (Cura Zero)
 #Info: Switch between extruder height or layer
 #Depend: GCode
 #Type: postprocess
 #Param: extruderSwitchLevelLayer(int:-1) Set a layer number
 
-__copyright__ = "Copyright (C) 2016 Dagoma.Fr - Released under terms of the AGPLv3 License"
+__copyright__ = "Copyright (C) 2016 Cura Zero - Released under terms of the AGPLv3 License"
 import re
 import os
 from Cura.util import profile

@@ -25,15 +25,15 @@ class aboutWindow(wx.Frame):
 		s = wx.BoxSizer(wx.VERTICAL)
 		p.SetSizer(s)
 
-		title = wx.StaticText(p, -1, 'Cura by Dagoma')
+		title = wx.StaticText(p, -1, 'Cura Zero')
 		title.SetFont(wx.Font(18, wx.SWISS, wx.NORMAL, wx.BOLD))
 		s.Add(title, flag=wx.ALIGN_CENTRE|wx.BOTTOM|wx.TOP|wx.LEFT|wx.RIGHT, border=5)
-		s.Add(wx.StaticText(p, -1, _('Cura by Dagoma was originally forked from Legacy Cura.\nIt is built with the following components:')), flag=wx.BOTTOM|wx.LEFT|wx.RIGHT, border=5)
+		s.Add(wx.StaticText(p, -1, _('Cura Zero was originally forked from Legacy Cura.\nIt is built with the following components:')), flag=wx.BOTTOM|wx.LEFT|wx.RIGHT, border=5)
 
 		self.addComponent('LegacyCura', _('Graphical user interface'), 'AGPLv3', 'https://github.com/daid/LegacyCura')
 		self.addComponent('CuraEngine', _('GCode Generator'), 'AGPLv3', 'https://github.com/Ultimaker/CuraEngine')
 		self.addComponent('Clipper', _('Polygon clipping library'), 'Boost', 'http://www.angusj.com/delphi/clipper.php')
-		self.addComponent('Python 3.9.12', _('Framework'), 'Python', 'http://python.org/')
+		self.addComponent('Python 3.11.9', _('Framework'), 'Python', 'http://python.org/')
 		self.addComponent('wxPython', _('GUI Framework'), 'wxWindows', 'http://www.wxpython.org/')
 		self.addComponent('PyOpenGL', _('3D Rendering Framework'), 'BSD', 'http://pyopengl.sourceforge.net/')
 		self.addComponent('PySerial', _('Serial communication library'), 'Python license', 'http://pyserial.sourceforge.net/')

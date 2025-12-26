@@ -1,4 +1,4 @@
-# Global check for Cura By Dagoma
+# Global check for Cura Zero
 This sheet sums up every important tests we need to make before upload a new release.
 These tests must be validated on Windows, Linux and MacOs.
 
@@ -48,5 +48,5 @@ To be sure the new version is ready to be distributed, please check the followin
 
 ## Uninstalling
 - The uninstaller can run.
-- The folder and all the files related tu Cura By Dagoma are deleted.
+- The folder and all the files related to Cura Zero are deleted.
 - The shortcuts (in the start menu and on the desktop) disappear.

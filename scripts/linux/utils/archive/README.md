@@ -1,13 +1,13 @@
-# Cura-by-Dagoma
-Cura-by-Dagoma is a fork of Legacy Cura made by Dagoma for the Dagoma printers.
+# Cura Zero
+Cura Zero is a fork of Legacy Cura.
 
 # Specifications
-Package: curabydago
-Source: Dagoma
+Package: curazero
+Source: Cura Zero
 Version: <BUILD_VERSION>
 Architecture: <BUILD_ARCHITECTURE>
-Maintainer: Orel <orel@dagoma.fr>
-Provides: curabydago
+Maintainer: Orel <orel@curazero.local>
+Provides: curazero
 Dependencies:
 * python3
 * python-wxgtk4.0 | wxpython
@@ -18,7 +18,7 @@ Dependencies:
 # How to:
 After extracting the archive, and installing the required dependencies, just run the following command:
 ```
-python3 ./curabydago/cura.py
+python3 ./curazero/cura.py
 ```
 Feel free to create your own launch script, desktop file,...
 
